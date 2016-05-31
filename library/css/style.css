@@ -883,6 +883,10 @@ span#cat-icon {
     display: none;
 }
 
+.home .entry-content {
+    font-size: .6em;
+}
+
 }
 
 MEDIUM

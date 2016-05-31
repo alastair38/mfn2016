@@ -48,67 +48,6 @@ Template Name: Home Page (No Sidebar)
     				</div> <!-- end #main -->
 
 
-					  <?php
-
-  $args = array(
-      'pagename' => 'about'
-    );
-
-  $the_query = new WP_Query( $args );
-
-?>
-
-<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-	<div id="events" class="large-4 medium-12 columns" role="main">
-    <i class="fi-results-demographics"></i>
-	   <h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h3>
-  </div>
-
-<?php endwhile; endif; ?>
-
-<?php wp_reset_query(); ?>
-
-
-<?php
-
-  $args = array(
-      'pagename' => 'connect'
-    );
-
-  $the_query = new WP_Query( $args );
-
-?>
-
-<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-<div id="events" class="large-4 medium-12 columns" role="main">
-					  <i class="fi-sound"></i>
-					  <h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h3>
-	</div>
-
-<?php endwhile; endif; ?>
-
-<?php wp_reset_query(); ?>
-
-<?php
-
-  $args = array(
-      'pagename' => 'contact'
-    );
-
-  $the_query = new WP_Query( $args );
-
-?>
-
-<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-<div id="twitter" class="large-4 medium-12 columns" role="main">
-					  <i class="fi-mail"></i>
-					   <h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h3>
-	</div>
-
-<?php endwhile; endif; ?>
 
 <?php wp_reset_query(); ?>
 
